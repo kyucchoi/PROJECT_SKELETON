@@ -1,0 +1,12 @@
+{
+  "name": "시선을4로잡는가계부",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

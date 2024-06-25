@@ -23,8 +23,6 @@ import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { useUserStore } from '@/stores/user';
 
-
-
 const user = ref(null);
 const fetchUser = async () => {
   try {

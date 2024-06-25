@@ -13,25 +13,25 @@
 
         <div id="avatars" v-if="avatarEditingMode">
           <img
-            @click="editCharacter('/src/asset/images/avatar1.png')"
+            @click="editCharacter('/images/avatar1.png')"
             class="avatar"
             src="@/asset/images/avatar1.png"
             alt="avatar1"
           />
           <img
-            @click="editCharacter('/src/asset/images/avatar2.png')"
+            @click="editCharacter('/images/avatar2.png')"
             class="avatar"
             src="@/asset/images/avatar2.png"
             alt="avatar2"
           />
           <img
-            @click="editCharacter('/src/asset/images/avatar3.png')"
+            @click="editCharacter('/images/avatar3.png')"
             class="avatar"
             src="@/asset/images/avatar3.png"
             alt="avatar3"
           />
           <img
-            @click="editCharacter('/src/asset/images/avatar4.png')"
+            @click="editCharacter('/images/avatar4.png')"
             class="avatar"
             src="@/asset/images/avatar4.png"
             alt="avatar4"

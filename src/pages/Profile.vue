@@ -194,6 +194,7 @@ const expenseGoalChangeInput = ref(null);
 fetchUserData();
 
 const user = computed(() => accountBookUser.user);
+console.log('ddddd' + user);
 
 function editGoalHandler() {
   editGoal(newIncomeGoal.value, newExpenseGoal.value);

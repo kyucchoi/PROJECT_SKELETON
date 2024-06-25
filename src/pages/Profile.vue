@@ -15,25 +15,25 @@
           <img
             @click="editCharacter('/images/avatar1.png')"
             class="avatar"
-            src="@/asset/images/avatar1.png"
+            src="/images/avatar1.png"
             alt="avatar1"
           />
           <img
             @click="editCharacter('/images/avatar2.png')"
             class="avatar"
-            src="@/asset/images/avatar2.png"
+            src="/images/avatar2.png"
             alt="avatar2"
           />
           <img
             @click="editCharacter('/images/avatar3.png')"
             class="avatar"
-            src="@/asset/images/avatar3.png"
+            src="/images/avatar3.png"
             alt="avatar3"
           />
           <img
             @click="editCharacter('/images/avatar4.png')"
             class="avatar"
-            src="@/asset/images/avatar4.png"
+            src="/images/avatar4.png"
             alt="avatar4"
           />
         </div>

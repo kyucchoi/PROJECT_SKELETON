@@ -26,6 +26,7 @@ const fetchUser = async () => {
   try {
     const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/user`);
     user.value = response.data;
+    console.log(user.value);
   } catch (error) {
     console.error('There was an error fetching the user data:', error);
   }

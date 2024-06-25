@@ -2,14 +2,16 @@ import { defineStore } from 'pinia';
 import { reactive, computed } from 'vue';
 import axios from 'axios';
 
+const BASEURL = import.meta.env.VITE_BASE_URL;
+
 export const useAccountBookStore = defineStore('accountBook', () => {
   const state = reactive({
     income: [],
     expenses: [],
   });
 
-  const BASEURL_INCOME = '/api/income';
-  const BASEURL_EXPENSE = '/api/expenses';
+  const BASEURL_INCOME = `${BASEURL}/income`;
+  const BASEURL_EXPENSE = `${BASEURL}/expenses`;
 
   async function fetchIncomeData() {
     try {

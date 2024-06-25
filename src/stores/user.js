@@ -8,7 +8,7 @@ export const useUserStore = defineStore('user', () => {
   });
 
   // localhost:3000
-  const BASEURL = '/api/user';
+  const BASEURL = `${import.meta.env.VITE_BASE_URL}/user`;
 
   async function fetchUserData() {
     try {

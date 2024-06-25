@@ -108,9 +108,11 @@ const category = ref('');
 const description = ref('');
 const picked = ref('');
 
+const BASEURL = import.meta.env.VITE_BASE_URL;
+
 async function fetchList() {
   try {
-    const url = 'http://localhost:3000/user';
+    const url = `${BASEURL}/user`;
     const user_data = await axios.get(url);
     console.log('user_data', user_data);
   } catch (e) {
@@ -142,7 +144,7 @@ async function sendComfirm() {
   if (date.value !== '' && description.value !== '' && amount.value !== 0) {
     if (picked.value === 'income') {
       // emit("date");
-      const url = 'http://localhost:3000/income';
+      const url = `${BASEURL}/income`;
       const user_income = await axios.get(url);
       console.log('user_income', user_income);
       try {
@@ -162,7 +164,7 @@ async function sendComfirm() {
         console.log(error);
       }
     } else if (picked.value !== 'income') {
-      const url = 'http://localhost:3000/expenses';
+      const url = `${BASEURL}/expenses`;
       const user_expenses = await axios.get(url);
       console.log('user_expenses', user_expenses);
       try {

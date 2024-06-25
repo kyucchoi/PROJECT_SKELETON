@@ -2,6 +2,8 @@ import { ref, computed } from 'vue';
 import axios from 'axios';
 import { defineStore } from 'pinia';
 
+const BASEURL = import.meta.env.VITE_BASE_URL;
+
 export const useChangeStore = defineStore('changedb', () => {
   const currentMonth = new Date().getMonth() + 1;
   const transaction = ref([]);
@@ -33,7 +35,7 @@ export const useChangeStore = defineStore('changedb', () => {
     tot_expenses.value = 0;
 
     try {
-      const url_income = 'http://localhost:3000/income';
+      const url_income = `${BASEURL}/income`;
       const user_income = await axios.get(url_income);
       // console.log("user_income", user_income.data);
 
@@ -44,7 +46,7 @@ export const useChangeStore = defineStore('changedb', () => {
         transaction.value.push(user_income.data[i]);
       }
 
-      const url_expenses = 'http://localhost:3000/expenses';
+      const url_expenses = `${BASEURL}/expenses`;
       const user_expenses = await axios.get(url_expenses);
       // console.log("user_expenses", user_expenses);
 
@@ -86,6 +88,7 @@ export const useChangeStore = defineStore('changedb', () => {
       }
       console.log('---------', tot_expenses.value);
     } catch (e) {
+      console.log(`${BASEURL}/income`);
       alert('데이터 불러오기 문제 발생!');
       console.log(e);
     }

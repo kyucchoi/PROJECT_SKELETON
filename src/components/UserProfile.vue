@@ -21,12 +21,18 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import { useUserStore } from '@/stores/user';
+
+
+
 const user = ref(null);
 const fetchUser = async () => {
   try {
     const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/user`);
     user.value = response.data;
-    console.log(user.value);
+    console.log(`${import.meta.env.VITE_BASE_URL}/user`);
+    console.log('RESSSS ' + response.data);
+    console.log('USERVALUE ' + user);
   } catch (error) {
     console.error('There was an error fetching the user data:', error);
   }

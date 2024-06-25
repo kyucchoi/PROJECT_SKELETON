@@ -110,9 +110,12 @@ export const useUserStore = defineStore('user', () => {
   }
 
   const accountBookUser = computed(() => state);
+  fetchUserData();
+  const userData = computed(() => state.user);
 
   return {
     fetchUserData,
+    userData,
     accountBookUser,
     editName,
     // editIncomeGoal,

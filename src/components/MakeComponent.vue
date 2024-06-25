@@ -57,9 +57,9 @@ const handleDeleteClick = async (index, type) => {
   try {
     let url;
     if (type === '+') {
-      url = `http://localhost:3000/income/${index}`;
+      url = `${import.meta.env.VITE_BASE_URL}/income/${index}`;
     } else if (type === '-') {
-      url = `http://localhost:3000/expenses/${index}`;
+      url = `${import.meta.env.VITE_BASE_URL}/expenses/${index}`;
     } else {
       console.error('유효하지 않은 유형입니다.');
       return;
